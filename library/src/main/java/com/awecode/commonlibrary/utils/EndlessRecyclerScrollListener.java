@@ -1,4 +1,4 @@
-package com.awecode.commonlibrary.util;
+package com.awecode.commonlibrary.utils;
 
 /**
  * Created by munnadroid on 2/14/17.

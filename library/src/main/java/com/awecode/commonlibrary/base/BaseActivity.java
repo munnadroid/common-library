@@ -16,8 +16,8 @@ import android.widget.EditText;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.awecode.commonlibrary.retrofit.ApiInterface;
 import com.awecode.commonlibrary.retrofit.ServiceGenerator;
-import com.awecode.commonlibrary.util.CommonUtils;
-import com.awecode.commonlibrary.util.Connectivity;
+import com.awecode.commonlibrary.utils.CommonUtils;
+import com.awecode.commonlibrary.utils.Connectivity;
 import com.mobsandgeeks.saripaar.ValidationError;
 import com.mobsandgeeks.saripaar.Validator;
 

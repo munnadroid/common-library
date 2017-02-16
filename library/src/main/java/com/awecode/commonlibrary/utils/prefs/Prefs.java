@@ -1,4 +1,4 @@
-package com.awecode.commonlibrary.util.prefs;
+package com.awecode.commonlibrary.utils.prefs;
 
 import android.annotation.TargetApi;
 import android.content.Context;

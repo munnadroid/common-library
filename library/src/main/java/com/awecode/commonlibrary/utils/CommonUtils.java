@@ -1,4 +1,4 @@
-package com.awecode.commonlibrary.util;
+package com.awecode.commonlibrary.utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
