@@ -50,8 +50,20 @@ public abstract class BaseActivity extends AppCompatActivity implements Validato
         ButterKnife.bind(this);
         mBundle = getIntent().getExtras();
         mContext = this;
-        mValidator = new Validator(this);
-        mValidator.setValidationListener(this);
+        initializeValidator();
+    }
+
+
+    private void initializeValidator() {
+        if (mValidator == null) {
+            mValidator = new Validator(this);
+            mValidator.setValidationListener(this);
+        }
+    }
+
+    public void validate() {
+        initializeValidator();
+        mValidator.validate();
     }
 
     protected boolean containsBundleKey(String KEY) {
@@ -99,7 +111,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Validato
         return CommonUtils.fromHtml(str);
     }
 
-    public int get_Color(int colorCode) {
+    public int get_color(int colorCode) {
         return ContextCompat.getColor(mContext, colorCode);
     }
 

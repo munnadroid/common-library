@@ -20,7 +20,7 @@ import android.view.animation.OvershootInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.awecode.squaddraft.BuildConfig;
+import com.awecode.commonlibrary.BuildConfig;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

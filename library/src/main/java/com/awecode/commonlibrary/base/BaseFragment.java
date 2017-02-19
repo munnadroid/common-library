@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -54,16 +55,18 @@ public abstract class BaseFragment extends Fragment implements Validator.Validat
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mValidator = new Validator(this);
-        mValidator.setValidationListener(this);
+        initializeValidator();
     }
 
-
-    public void validate() {
+    private void initializeValidator() {
         if (mValidator == null) {
             mValidator = new Validator(this);
             mValidator.setValidationListener(this);
         }
+    }
+
+    public void validate() {
+        initializeValidator();
         mValidator.validate();
     }
 
@@ -157,8 +160,8 @@ public abstract class BaseFragment extends Fragment implements Validator.Validat
 
     }
 
-    public void connectedToInternet() {
 
+    public int get_color(int colorCode) {
+        return ContextCompat.getColor(mContext, colorCode);
     }
-
 }
